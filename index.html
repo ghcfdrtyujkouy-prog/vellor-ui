@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b12">
+  <meta name="description" content="Vellor UI is an open-source library of free, modern HTML and CSS components. Browse buttons, cards, navbars, and animations, preview them live, and copy the code instantly.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Vellor UI">
+  <meta property="og:title" content="Vellor UI — Beautiful interfaces, ready-to-use code">
+  <meta property="og:description" content="An open-source library of ready-to-use HTML and CSS components. Preview, copy, and start building.">
+  <title>Vellor UI — Beautiful interfaces, ready-to-use code</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%2319172a'/%3E%3Cpath d='M10 12h5l5 15 5-15h5l-7.5 19h-5z' fill='%23c9ff70'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-glow page-glow-one" aria-hidden="true"></div>
+  <div class="page-glow page-glow-two" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Vellor UI — Home">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="brand-name">Vellor<span> UI</span></span>
+    </a>
+    <nav class="topnav" aria-label="Main navigation">
+      <a class="topnav-link active" href="#library">Library</a>
+      <a class="topnav-link" href="#about">About</a>
+      <a class="topnav-link" href="#about">How it works <span aria-hidden="true">↗</span></a>
+    </nav>
+    <a class="topbar-cta" href="#library">Explore the library <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-badge"><span class="status-dot"></span> Open-source component library</div>
+        <h1>Beautiful interfaces,<br><span>ready-to-use code.</span></h1>
+        <p>Modern HTML and CSS components that speed up your workflow. Pick a component, preview it, and copy the code straight into your project.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#library">Browse components <span aria-hidden="true">→</span></a>
+          <a class="hero-secondary" href="#about">How it works <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-stats" aria-label="Library features">
+          <div><strong>HTML</strong><span>Clean and readable</span></div>
+          <i></i>
+          <div><strong>CSS</strong><span>No dependencies</span></div>
+          <i></i>
+          <div><strong>Free</strong><span>Open to everyone</span></div>
+        </div>
+      </div>
+      <div class="hero-showcase" aria-label="Live component preview">
+        <div class="showcase-top"><span><i></i><i></i><i></i></span><span>vellor-ui / components</span><span class="showcase-live">LIVE</span></div>
+        <div class="showcase-content">
+          <div class="showcase-label">BUTTON / 001</div>
+          <button class="demo-glow-button" type="button">Start your project <span aria-hidden="true">↗</span></button>
+          <div class="showcase-skeleton"><span></span><span></span><span></span></div>
+          <div class="showcase-code"><span>&lt;button</span> class=<b>"start"</b><span>&gt;</span> Start your project <span>&lt;/button&gt;</span></div>
+        </div>
+        <div class="showcase-orbit orbit-one"></div><div class="showcase-orbit orbit-two"></div>
+        <span class="float-chip chip-html">✦ &nbsp; HTML</span><span class="float-chip chip-css">✳ &nbsp; CSS only</span>
+      </div>
+      <div class="hero-index"><span>01</span><i></i><span>04</span></div>
+    </section>
+
+    <section class="library section-shell" id="library">
+      <div class="section-heading">
+        <div><span class="eyebrow-text">Everything you need to build</span><h2>Component <span>library</span></h2></div>
+        <p>Small components. Big ideas.</p>
+      </div>
+      <div class="library-toolbar">
+        <div class="filter-list" id="filterList" role="group" aria-label="Filter components">
+          <button class="filter-chip active" type="button" data-category="all" aria-pressed="true">All <span id="totalCount"></span></button>
+          <button class="filter-chip" type="button" data-category="buttons" aria-pressed="false">Buttons</button>
+          <button class="filter-chip" type="button" data-category="cards" aria-pressed="false">Cards</button>
+          <button class="filter-chip" type="button" data-category="navbars" aria-pressed="false">Navigation</button>
+          <button class="filter-chip" type="button" data-category="animations" aria-pressed="false">Animations</button>
+          <button class="filter-chip" type="button" data-category="forms" aria-pressed="false">Forms</button>
+          <button class="filter-chip" type="button" data-category="badges" aria-pressed="false">Badges</button>
+        </div>
+        <label class="search-field">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+          <input id="searchInput" type="search" placeholder="Search components..." aria-label="Search the library">
+          <kbd>⌘ K</kbd>
+        </label>
+      </div>
+      <div class="library-meta"><span id="resultSummary">All components</span><span><span class="live-dot"></span> Live preview</span></div>
+      <div class="component-grid" id="componentGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><strong>No components found</strong><p>Try another search or choose a different category.</p></div>
+    </section>
+
+    <section class="how-it-works section-shell" id="about">
+      <div class="how-intro"><span class="eyebrow-text">From idea to implementation</span><h2>Three steps.<br><span>Then you're building.</span></h2><p>No libraries to install and no complicated setup. Every component is ready so you can focus on your idea.</p></div>
+      <div class="steps">
+        <article class="step"><span class="step-number">01</span><div class="step-icon">⌕</div><h3>Choose a component</h3><p>Browse the library and find the right piece for your project.</p></article>
+        <article class="step"><span class="step-number">02</span><div class="step-icon">◉</div><h3>Preview and inspect</h3><p>See the live preview and explore its HTML and CSS.</p></article>
+        <article class="step"><span class="step-number">03</span><div class="step-icon">⧉</div><h3>Copy and use</h3><p>Copy the code and drop it straight into your project.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#home" aria-label="Vellor UI — Back to top"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="brand-name">Vellor<span> UI</span></span></a>
+    <p>Made for developers. Open to everyone. <span>✦</span> <a class="license-link" href="LICENSE">MIT License</a></p>
+    <span class="footer-note">HTML + CSS · No dependencies</span>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
